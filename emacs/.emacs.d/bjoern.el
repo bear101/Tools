@@ -277,3 +277,5 @@ is located before first function, returns nil."
 ;; Pager stuff (scroll uten aa flytte cursoren)
 (load-file "~/.emacs.d/pager.el")
 (require 'pager)
+
+(load-file "~/.emacs.d/markdown-mode.el")
