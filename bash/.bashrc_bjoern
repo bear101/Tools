@@ -1,0 +1,34 @@
+alias ll='ls -l'
+alias cd..='cd ..'
+alias e='emacs -nw'
+alias ssh='ssh -Y'
+alias f='find . -name'
+
+if [ `uname -s` = "Darwin" ]; then
+#Mac OS X
+alias svncleanup="svn st --no-ignore |grep -e ^\? -e ^I | awk '{print $2}'| xargs rm -r"
+
+alias srcfind='find . -name \*.cpp -o -name \*.h -o -name \*.c -o -name \*.inl -o -name \*.cxx -o -name \*.java -o -name \*.cs -o -name \*.mm -o -name \*.hpp'
+
+else
+# Linux
+
+alias svncleanup="svn st --no-ignore |grep -e ^\? -e ^I | awk '{print $2}'| xargs -r rm -r"
+
+alias srcfind='find . -regex ".*\.\(h\|cpp\|cxx\|mm\|hpp\|c\|inl\|java\|cs\)"'
+
+fi
+
+alias cpptags='srcfind | etags --language=c++ -'
+alias javatags='srcfind | etags --language=java -'
+alias maketags='srcfind | etags --language=auto -'
+
+alias hgrep='find . -name "*.h" | xargs grep '
+alias srcgrep='srcfind | xargs grep 2>/dev/null'
+
+
+EDITOR=emacs
+export EDITOR
+
+alias bashupdate="svn export --force https://github.com/bear101/Tools/bash $HOME"
+alias emacsupdate="svn export --force https://github.com/bear101/Tools/emacs/.emacs.d $HOME/.emacs.d"
