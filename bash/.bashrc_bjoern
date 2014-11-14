@@ -30,5 +30,5 @@ alias srcgrep='srcfind | xargs grep 2>/dev/null'
 EDITOR=emacs
 export EDITOR
 
-alias bashupdate="svn export --force https://github.com/bear101/Tools/bash $HOME"
-alias emacsupdate="svn export --force https://github.com/bear101/Tools/emacs/.emacs.d $HOME/.emacs.d"
+alias bashupdate="svn export --force https://github.com/bear101/Tools/trunk/bash $HOME"
+alias emacsupdate="svn export --force https://github.com/bear101/Tools/trunk/emacs/.emacs.d $HOME/.emacs.d"
