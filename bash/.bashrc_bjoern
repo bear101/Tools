@@ -13,7 +13,7 @@ alias srcfind='find . -name \*.cpp -o -name \*.h -o -name \*.c -o -name \*.inl -
 else
 # Linux
 
-alias svncleanup="svn st --no-ignore |grep -e ^\? -e ^I | awk '{print $2}'| xargs -r rm -r"
+alias svnreset="svn st --no-ignore |grep -e ^\? -e ^I | awk '{print $2}'| xargs -r rm -r"
 
 alias srcfind='find . -regex ".*\.\(h\|cpp\|cxx\|mm\|hpp\|c\|inl\|java\|cs\)"'
 
