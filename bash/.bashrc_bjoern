@@ -6,7 +6,7 @@ alias f='find . -name'
 
 if [ `uname -s` = "Darwin" ]; then
 #Mac OS X
-alias svncleanup="svn st --no-ignore |grep -e ^\? -e ^I | awk '{print $2}'| xargs rm -r"
+alias svnreset="svn st --no-ignore |grep -e ^\? -e ^I | awk '{print $2}'| xargs rm -r"
 
 alias srcfind='find . -name \*.cpp -o -name \*.h -o -name \*.c -o -name \*.inl -o -name \*.cxx -o -name \*.java -o -name \*.cs -o -name \*.mm -o -name \*.hpp'
 
