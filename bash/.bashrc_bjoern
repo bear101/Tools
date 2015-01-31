@@ -8,14 +8,14 @@ if [ `uname -s` = "Darwin" ]; then
 #Mac OS X
 alias svnreset="svn st --no-ignore |grep -e ^\? -e ^I | awk '{print $2}'| xargs rm -r"
 
-alias srcfind='find . -name \*.cpp -o -name \*.h -o -name \*.c -o -name \*.inl -o -name \*.cxx -o -name \*.java -o -name \*.cs -o -name \*.mm -o -name \*.hpp -o -name \*.py'
+alias srcfind='find . -name \*.cpp -o -name \*.h -o -name \*.c -o -name \*.inl -o -name \*.cxx -o -name \*.java -o -name \*.cs -o -name \*.mm -o -name \*.hpp -o -name \*.py -o -name \*.rc'
 
 else
 # Linux
 
 alias svnreset="svn st --no-ignore |grep -e ^\? -e ^I | awk '{print $2}'| xargs -r rm -r"
 
-alias srcfind='find . -regex ".*\.\(h\|cpp\|cxx\|mm\|hpp\|c\|inl\|java\|cs\|py\)"'
+alias srcfind='find . -regex ".*\.\(h\|cpp\|cxx\|mm\|hpp\|c\|inl\|java\|cs\|py\|rc\)"'
 
 fi
 
