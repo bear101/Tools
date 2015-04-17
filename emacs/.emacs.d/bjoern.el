@@ -274,8 +274,21 @@ is located before first function, returns nil."
        (buffer-file-name x))
      (buffer-list)))))
 
+(defun revert-all-buffers ()
+    "Refreshes all open buffers from their respective files."
+    (interactive)
+    (dolist (buf (buffer-list))
+      (with-current-buffer buf
+        (when (and (buffer-file-name) (file-exists-p (buffer-file-name)) (not (buffer-modified-p)))
+          (revert-buffer t t t) )))
+    (message "Refreshed open files.") )
+
+
+
 ;; Pager stuff (scroll uten aa flytte cursoren)
 (load-file "~/.emacs.d/pager.el")
 (require 'pager)
 
 (load-file "~/.emacs.d/markdown-mode.el")
+
+
