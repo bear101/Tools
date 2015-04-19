@@ -190,10 +190,10 @@ is located before first function, returns nil."
 
 ;; Pulled from JanBorsodi.emacs
 (defvar c++-header-ext-regexp "\\.\\(hpp\\|h\\|\hh\\|H\\)$")
-(defvar c++-source-ext-regexp "\\.\\(cpp\\|c\\|\cc\\|C\\)$")
+(defvar c++-source-ext-regexp "\\.\\(cpp\\|c\\|\cc\\|C\\|mm\\)$")
 (defvar c++-default-header-ext "hpp")
 (defvar c++-default-source-ext "cpp")
-(defvar c++-source-extension-list '("c" "cc" "C" "cpp"))
+(defvar c++-source-extension-list '("c" "cc" "C" "cpp" "mm"))
 (defvar c++-header-extension-list '("h" "hh" "H" "hpp"))
 (defun toggle-source-header()
   "Switches to the source buffer if currently in the header buffer and vice versa."
