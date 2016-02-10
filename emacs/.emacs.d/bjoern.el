@@ -254,6 +254,7 @@ is located before first function, returns nil."
 (global-set-key '[M-n]    'pager-row-down)
 (global-set-key '[M-down] 'pager-row-down)
 (global-set-key '[M-kp-2] 'pager-row-down)
+(global-set-key "\M--"    'tags-search)
 (global-set-key "\M-n" 'hippie-expand)
 (define-key global-map "\M-o" 'toggle-source-header)
 
