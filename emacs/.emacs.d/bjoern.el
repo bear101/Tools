@@ -291,5 +291,6 @@ is located before first function, returns nil."
 (require 'pager)
 
 (load-file "~/.emacs.d/markdown-mode.el")
+(load-file "~/.emacs.d/gud.el")
 
 
