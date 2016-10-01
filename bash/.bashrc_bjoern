@@ -3,6 +3,7 @@ alias cd..='cd ..'
 alias e='emacs -nw'
 alias ssh='ssh -Y'
 alias f='find . -name'
+alias ec='emacsclient -n'
 
 if [ `uname -s` = "Darwin" ]; then
 #Mac OS X
