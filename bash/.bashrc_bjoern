@@ -25,7 +25,7 @@ alias cpptags='srcfind | etags --language=c++ -'
 alias javatags='srcfind | etags --language=java -'
 alias maketags='srcfind | etags --language=auto -'
 
-alias hgrep='find . -name "*.h" | xargs grep '
+alias hgrep='find . -name "*.h" -or -name "*.hpp" | xargs grep '
 alias srcgrep='srcfind | xargs grep 2>/dev/null'
 
 
