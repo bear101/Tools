@@ -17,7 +17,7 @@ else
 
 alias svnreset="svn st --no-ignore |grep -e ^\? -e ^I | awk '{print $2}'| xargs -r rm -r"
 alias cppfind='find . -regex ".*\.\(h\|cpp\|cxx\|hpp\|c\)"'
-alias srcfind='find . -regex ".*\.\(h\|cpp\|cxx\|mm\|m\|hpp\|c\|inl\|java\|cs\|py\|rc\|swift\)"'
+alias srcfind='find . -regex ".*\.\(h\|cpp\|cxx\|mm\|m\|hpp\|c\|inl\|java\|cs\|py\|rc\|swift\|php\)"'
 
 fi
 
