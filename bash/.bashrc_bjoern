@@ -10,7 +10,7 @@ if [ `uname -s` = "Darwin" ]; then
 alias svnreset="svn st --no-ignore |grep -e ^\? -e ^I | awk '{print $2}'| xargs rm -r"
 
 alias cppfind='find . -name \*.cpp -o -name \*.h -o -name \*.c -o -name \*.inl -o -name \*.cxx -o -name \*.hpp'
-alias srcfind='find . -name \*.cpp -o -name \*.h -o -name \*.c -o -name \*.inl -o -name \*.cxx -o -name \*.java -o -name \*.cs -o -name \*.mm -o -name \*.m -o -name \*.hpp -o -name \*.py -o -name \*.rc -o -name \*.swift'
+alias srcfind='find . -name \*.cpp -o -name \*.h -o -name \*.c -o -name \*.inl -o -name \*.cxx -o -name \*.java -o -name \*.cs -o -name \*.mm -o -name \*.m -o -name \*.hpp -o -name \*.py -o -name \*.rc -o -name \*.swift -o -name \*.php'
 
 else
 # Linux
