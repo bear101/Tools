@@ -5,28 +5,21 @@ alias ssh='ssh -Y'
 alias f='find . -name'
 alias ec='emacsclient -n'
 
-if [ `uname -s` = "Darwin" ]; then
-#Mac OS X
 alias svnreset="svn st --no-ignore |grep -e ^\? -e ^I | awk '{print $2}'| xargs rm -r"
 
-alias cppfind='find . -name \*.cpp -o -name \*.h -o -name \*.c -o -name \*.inl -o -name \*.cxx -o -name \*.hpp'
 alias srcfind='find . -name \*.cpp -o -name \*.h -o -name \*.c -o -name \*.inl -o -name \*.cxx -o -name \*.java -o -name \*.cs -o -name \*.mm -o -name \*.m -o -name \*.hpp -o -name \*.py -o -name \*.rc -o -name \*.swift -o -name \*.php'
+alias cppfind='find . -name \*.cpp -o -name \*.h -o -name \*.c -o -name \*.inl -o -name \*.cxx -o -name \*.hpp'
+alias javafind='find . -name \*.java'
+alias pyfind='find . -name \*.py'
 
-else
-# Linux
-
-alias svnreset="svn st --no-ignore |grep -e ^\? -e ^I | awk '{print $2}'| xargs -r rm -r"
-alias cppfind='find . -regex ".*\.\(h\|cpp\|cxx\|hpp\|c\)"'
-alias srcfind='find . -regex ".*\.\(h\|cpp\|cxx\|mm\|m\|hpp\|c\|inl\|java\|cs\|py\|rc\|swift\|php\)"'
-
-fi
-
-alias cpptags='srcfind | etags --language=c++ -'
-alias javatags='srcfind | etags --language=java -'
+alias cpptags='cppfind | etags --language=c++ -'
+alias javatags='javafind | etags --language=java -'
 alias maketags='srcfind | etags --language=auto -'
 
-alias hgrep='find . -name "*.h" -or -name "*.hpp" | xargs grep '
-alias srcgrep='srcfind | xargs grep 2>/dev/null'
+alias hgrep='find . -name "*.h" -or -name "*.hpp" -print0 | xargs -0 grep '
+alias srcgrep='srcfind -print0 | xargs -0 grep 2>/dev/null'
+alias cppgrep='cppfind -print0 | xargs -0 grep 2>/dev/null'
+alias javagrep='javafind -print0 | xargs -0 grep 2>/dev/null'
 
 
 EDITOR=emacs
