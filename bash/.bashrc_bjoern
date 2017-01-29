@@ -16,10 +16,10 @@ alias cpptags='cppfind | etags --language=c++ -'
 alias javatags='javafind | etags --language=java -'
 alias maketags='srcfind | etags --language=auto -'
 
-alias hgrep='find . -name "*.h" -or -name "*.hpp" -print0 | xargs -0 grep '
-alias srcgrep='srcfind -print0 | xargs -0 grep 2>/dev/null'
-alias cppgrep='cppfind -print0 | xargs -0 grep 2>/dev/null'
-alias javagrep='javafind -print0 | xargs -0 grep 2>/dev/null'
+alias hgrep='find . -name "*.h" -or -name "*.hpp" | xargs grep '
+alias srcgrep='srcfind | xargs grep 2>/dev/null'
+alias cppgrep='cppfind | xargs grep 2>/dev/null'
+alias javagrep='javafind | xargs grep 2>/dev/null'
 
 
 EDITOR=emacs
