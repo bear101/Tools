@@ -293,4 +293,6 @@ is located before first function, returns nil."
 (load-file "~/.emacs.d/markdown-mode.el")
 (load-file "~/.emacs.d/gud.el")
 
+;; Don't include filename in annotate
+(setq vc-git-annotate-switches '("-w"))
 
