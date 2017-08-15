@@ -3,6 +3,7 @@ alias cd..='cd ..'
 alias e='emacs -nw'
 alias ssh='ssh -Y'
 alias f='find . -name'
+alias ff='find . -type f -name'
 alias ec='emacsclient -n'
 
 alias svnreset="svn st --no-ignore |grep -e ^\? -e ^I | awk '{print $2}'| xargs rm -r"
