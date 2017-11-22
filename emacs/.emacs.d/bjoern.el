@@ -296,3 +296,4 @@ is located before first function, returns nil."
 ;; Don't include filename in annotate
 (setq vc-git-annotate-switches '("-w"))
 
+(server-start)
