@@ -297,3 +297,6 @@ is located before first function, returns nil."
 (setq vc-git-annotate-switches '("-w"))
 
 (server-start)
+
+(setq load-path (cons (expand-file-name "~/.emacs.d") load-path))
+(require 'cmake-mode)
