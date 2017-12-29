@@ -298,5 +298,6 @@ is located before first function, returns nil."
 
 (server-start)
 
-(setq load-path (cons (expand-file-name "~/.emacs.d") load-path))
+;; Emacs 25.0 complains about this...
+;; (setq load-path (cons (expand-file-name "~/.emacs.d") load-path))
 (require 'cmake-mode)
