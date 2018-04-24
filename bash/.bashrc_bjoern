@@ -5,6 +5,7 @@ alias ssh='ssh -Y'
 alias f='find . -name'
 alias ff='find . -type f -name'
 alias ec='emacsclient -n'
+alias ff0='find . -type f -print0 | xargs -0 grep $1'
 
 alias svnreset="svn st --no-ignore |grep -e ^\? -e ^I | awk '{print $2}'| xargs rm -r"
 
