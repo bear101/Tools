@@ -147,47 +147,6 @@
 ;;Extension .h should default to c++-mode
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
-
-
-;;{{{ Which Function
-(defun which-function ()
-  "Return current function name based on point.
-If `imenu--index-alist' does no exist, or is empty  or if point
-is located before first function, returns nil."
-  (and
-   (boundp 'imenu--index-alist)
-   imenu--index-alist
-   (let ((pair (car-safe imenu--index-alist))
-         (rest (cdr-safe imenu--index-alist))
-         (name nil))
-     ;; Fix suggested by Roman Belenov <roman@nstl.nnov.ru> and
-     ;; accepted by Richard Stallman <rms@santafe.edu> (<rms@gnu.org>).
-     ;;(while (and pair (or (not (number-or-marker-p (cdr pair)))
-     (while (and (or rest pair)
-                 (or (not (number-or-marker-p (cdr pair)))
-                     ;; Fix made by Cristian Ionescu-Idbohrn <cii@axis.com>
-                     ;; show function name when point is on 1st char of
-                     ;; function name.
-                     ;;(> (point) (cdr pair))))
-                     (>= (point) (cdr pair))))
-       (setq name (car pair))
-       (setq pair (car-safe rest))
-       (setq rest (cdr-safe rest)))
-     name)))
-
-(defun cii-which-func-mode-on ()
-  "Turn `which-func-modes' on, full scale."
-  (setq which-func-maxout         0         ;; enabled, regardless buffer size
-        which-func-format         '(" [" which-func-current "]")
-        which-func-mode-global    t)
-  (require 'which-func)
-  (add-to-list 'which-func-modes 'cperl-mode)
-;  (add-to-list 'which-func-modes 'java-mode)
-  (add-to-list 'which-func-modes 'jde-mode)
-  (which-func-mode 0)
-  (which-func-mode 1))
-(cii-which-func-mode-on)
-
 ;; Pulled from JanBorsodi.emacs
 (defvar c++-header-ext-regexp "\\.\\(hpp\\|h\\|\hh\\|H\\)$")
 (defvar c++-source-ext-regexp "\\.\\(cpp\\|c\\|\cc\\|C\\|mm\\)$")
