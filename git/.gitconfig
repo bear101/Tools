@@ -1,0 +1,8 @@
+[user]
+	name = Bjørn Damstedt Rasmussen
+	email = contact@bearware.dk
+[merge]
+	tool = kdiff3
+	renamelimit = 10000
+[alias]
+	lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
