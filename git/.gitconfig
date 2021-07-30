@@ -10,3 +10,6 @@
         tool = meld
 [pull]
 	ff = only
+[alias]
+        statusi = status --ignore-submodules
+        diffi = diff --ignore-submodules
