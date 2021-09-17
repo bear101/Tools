@@ -260,3 +260,6 @@
 ;; Emacs 25.0 complains about this...
 ;; (setq load-path (cons (expand-file-name "~/.emacs.d") load-path))
 (load-file "~/.emacs.d/cmake-mode.el")
+
+;; Fix 'dead-tilde'
+(require 'iso-transl)
