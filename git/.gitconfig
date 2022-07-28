@@ -6,6 +6,7 @@
 	renamelimit = 10000
 [alias]
         lol = log --graph --date=format:'%Y-%m-%d %H:%m' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit
+        lof = log --date=format:'%Y-%m-%d %H:%m' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --name-only
 [diff]
         tool = meld
 [pull]
