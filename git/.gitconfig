@@ -14,3 +14,5 @@
 [alias]
         statusi = status --ignore-submodules
         diffi = diff --ignore-submodules
+[push]
+	autoSetupRemote = true
