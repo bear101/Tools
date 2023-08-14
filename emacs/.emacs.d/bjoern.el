@@ -82,7 +82,8 @@
  '(scheme-program-name "mzscheme")
  '(scroll-bar-mode (quote right))
  '(show-paren-mode t nil (paren))
- '(transient-mark-mode 1))
+ '(transient-mark-mode 1)
+ '(vc-git-print-log-follow t))
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
