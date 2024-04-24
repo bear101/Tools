@@ -23,6 +23,7 @@ alias srcgrep='srcfind | xargs grep 2>/dev/null'
 alias cppgrep='cppfind | xargs grep 2>/dev/null'
 alias javagrep='javafind | xargs grep 2>/dev/null'
 
+alias appleclean='find . \( -name ".DS_*" -or -name "._*" \) -print0 | xargs -0 rm -rf > /dev/null'
 
 EDITOR=emacs
 export EDITOR
